@@ -11,15 +11,15 @@
 
 </head>
 <body>
-<header class="nav navbar-static-top">
-  <ul class="nav navbar-nav">
-    <li class="text-center"><%= link_to("home", welcome_index_path) %></li>
-    <li class="text-center"><%= link_to("about", about_index_path) %></li>
-    <li class="text-center"><%= link_to("contact", contact_index_path) %></li>
-  </ul>
-</header>
-
-
+  <div class="container">
+    <header class="nav navbar-static-top">
+      <ul class="nav navbar-nav">
+        <li class="text-center"><%= link_to("home", welcome_index_path) %></li>
+        <li class="text-center"><%= link_to("about", about_index_path) %></li>
+        <li class="text-center"><%= link_to("contact", contact_index_path) %></li>
+      </ul>
+    </header>
+</div>
 <%= yield %>
 
 </body>
