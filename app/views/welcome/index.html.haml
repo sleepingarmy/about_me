@@ -1,12 +1,72 @@
-%h1 Welcome#index
+%div.container
+  %div.row
+    %br/
+    %div.col.m6.s12.center-align
+      = image_tag("ham", class: 'responsive-img small rosie-img')
+    %div.col.m6.s12
+      %h1.center-align
+        welcome!
+      %p  Thank you for visiting my personal website.  Please check out my information below.  I look forward to hearing from you!
 
-%p explore the site
+  %div.row
+    %div.col.s12
+      %ul.tabs
+        %li.tab.col.s3
+          %a{:href => "#work"}
+            work
+        %li.tab.col.s3
+          %a{:href => "#projects"}
+            projects
+        %li.tab.col.s3
+          %a.active{:href => "#volunteer"}
+            volunteer
+        %li.tab.col.s3
+          %a{:href => "#resume"}
+            resume
 
-= link_to("home", welcome_index_path)
-= link_to("about", about_index_path)
-= link_to("contact", contact_index_path)
+    %div#work.col.s12
+      %h3  DevPoint Labs
+      %h4 Instructor
+      %p  At DevPoint Labs, I lead the afternoon project time and help students learn Ruby on Rails and related tools.  As an alum of DPL, I take great pride in giving back to the school that taught me.  I love helping others learn and discover.
 
-%p find me on the web
+      %h3 Exposure Tracker
+      %h4 Web Development Intern
+      %p  I started my internship at Exposure Tracker while finishing at DevPoint Labs.  This was an exciting opportunity for me to gain experience with a real Rails application.  Responsibilities include resolving bugs and improving existing features.  I also dedicated time to replacing the Bootstrap CSS framework with Materialize.  
 
-= link_to("instagram", "https://www.instagram.com/sleepingarmy")
-= link_to("github", "https://github.com/sleepingarmy")
+      %h3 Suppose Quilt Boutique
+      %h4 Customer Service Associate
+      %p  Suppose Quilt Shop is a family-owned small business with a focus on custom quilting and designer fabric.  Some of my responsiblities included assisting customers with color choice and design ideas, and creating samples to display in the shop.
+
+    %div#projects.col.s12
+      %h3 SLCfit
+      %p SLCfit is a health and fitness web app built with Ruby on Rails, Coffeescript, HTML, CSS, RSpec, Postgres, and Bootstrap.  I implemented RSpec testing, GoogleCharts functionality, and the Yelp api, as well as assisted with general styling.  This project was the final capstone group project at DPL.
+      %h3 Sixerr
+
+    %div#volunteer.col.s12
+      %h3 Rails Girls
+      %h4 Coach, Speaker
+      %p  Rails Girls is a community-driven, international organization geared towards introducing women to programming.  I was given the opportunity to be a coach at Rails Girls SLC and to also give the Intro to Programming talk at the event.  Check out my presentation on Youtube!
+      
+      %iframe{:allowfullscreen => "", :frameborder => "0", :height => "315", :src => "https://www.youtube.com/embed/DV95ZS-75cU", :width => "420"}
+
+    %div#resume.col.s12
+      %h3 
+
+
+
+  / %div.row
+  /   %div.col.s4
+  /     %h2#work-experience
+  /       work experience
+  /     %p technology, television, design, sewing, fitness
+
+  /   %div.col.s4
+  /     %h2#projects
+  /       projects
+  /     %p slcfit
+  /     %p sixerr
+
+  /   %div.col.s4
+  /     %h2#volunteer
+  /       volunteer experience
+  /     %p rails girls
