@@ -12,6 +12,8 @@
 
   %link{:href => "https://fonts.googleapis.com/icon?family=Material+Icons", :rel => "stylesheet"}/
 
+  %link{:href => "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css", :rel => "stylesheet"}/
+
 
 %body
   %div.container-fluid
@@ -23,16 +25,18 @@
               ROSIE THOMAS
             %ul#nav-mobile.right.hide-on-med-and-down
               %li
-                = link_to 'Contact', contact_index_path, target: '_blank'
+                %a{:href => "mailto:rsm.thomas@gmail.com"}
+                %i.fa.fa-envelope
+                / = link_to 'rsm.thomas@gmail.com', mailto: 'rsm.thomas@gmail.com', target: '_blank'
               %li
-                = link_to "Instagram", "https://www.instagram.com/sleepingarmy", target: '_blank'
+                = link_to "", "https://www.instagram.com/sleepingarmy", target: '_blank'
+                %i.fa.fa-instagram
               %li
-                = link_to "Github", "https://github.com/sleepingarmy", target: '_blank'
+                = link_to "", "https://github.com/sleepingarmy", target: '_blank'
+                %i.fa.fa-github
               %li
-                = link_to "Linkedin", "https://www.linkedin.com/in/rosiethom", target: '_blank'
+                = link_to "", "https://www.linkedin.com/in/rosiethom", target: '_blank'
+                %i.fa.fa-linkedin
 
 = yield
-
-
-
 
