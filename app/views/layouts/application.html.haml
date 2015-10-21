@@ -8,30 +8,28 @@
   = csrf_meta_tags 
 
   / google fonts
-  / %link{href='http://fonts.googleapis.com/css?family=Poiret+One|Pacifico|Raleway:400,100,200,300,500,600,700' rel='stylesheet' type='text/css'}
+  %link{:href => "https://fonts.googleapis.com/css?family=Raleway|Poiret+One|Vollkorn|Karla:400,700|Josefin+Slab:400,600", :rel => "stylesheet", :type => "text/css"}/
+
+  %link{:href => "https://fonts.googleapis.com/icon?family=Material+Icons", :rel => "stylesheet"}/
 
 
 %body
   %div.container-fluid
     %header
-      %nav
-        %div.nav-wrapper
-          %a.brand-logo.left{:href => ""}
-            rosie thomas
-          %ul#nav-mobile.right.hide-on-med-and-down
-            %li
-              = link_to 'home', welcome_index_path
-            %li
-              = link_to 'about', about_index_path
-            %li
-              = link_to 'contact', contact_index_path, target: '_blank'
-            %li
-              = link_to "instagram", "https://www.instagram.com/sleepingarmy", target: '_blank'
-            %li
-              = link_to "github", "https://github.com/sleepingarmy", target: '_blank'
-            %li
-              = link_to "linkedin", "https://www.linkedin.com/in/rosiethom", target: '_blank'
-
+      .navbar-fixed
+        %nav
+          .nav-wrapper
+            %a.brand-logo.padding-left{:href => ""}
+              ROSIE THOMAS
+            %ul#nav-mobile.right.hide-on-med-and-down
+              %li
+                = link_to 'Contact', contact_index_path, target: '_blank'
+              %li
+                = link_to "Instagram", "https://www.instagram.com/sleepingarmy", target: '_blank'
+              %li
+                = link_to "Github", "https://github.com/sleepingarmy", target: '_blank'
+              %li
+                = link_to "Linkedin", "https://www.linkedin.com/in/rosiethom", target: '_blank'
 
 = yield
 

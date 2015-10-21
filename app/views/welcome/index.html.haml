@@ -1,57 +1,88 @@
-%div.container
-  %div.row
+.container
+  .row
     %br/
     %div.col.m6.s12.center-align
-      = image_tag("ham", class: 'responsive-img small rosie-img')
-    %div.col.m6.s12
-      %h1.center-align
-        welcome!
-      %p  Thank you for visiting my personal website.  Please check out my information below.  I look forward to hearing from you!
+      = image_tag("ham", class: 'responsive-img rosie-img')
+    %div.col.m6.s12.center-align
+      %h1
+        Welcome!
+      %p.blurb  Thank you for visiting my personal website.  Please check out my information below.  I look forward to hearing from you!  Please contact me at rsm.thomas@gmail.com.
 
-  %div.row
-    %div.col.s12
+  .row
+    %br/
+    .col.s12.center-align
       %ul.tabs
         %li.tab.col.s3
+          %a{:href => "#about-me"}
+            %i.material-icons.tiny face
+            About Me
+        %li.tab.col.s3
           %a{:href => "#work"}
+            %i.material-icons.tiny laptop
             work
         %li.tab.col.s3
           %a{:href => "#projects"}
+            %i.material-icons.tiny palette
             projects
         %li.tab.col.s3
           %a.active{:href => "#volunteer"}
+            %i.material-icons.tiny star
             volunteer
-        %li.tab.col.s3
-          %a{:href => "#resume"}
-            resume
 
-    %div#work.col.s12
-      %h3  DevPoint Labs
-      %h4 Instructor
-      %p  At DevPoint Labs, I lead the afternoon project time and help students learn Ruby on Rails and related tools.  As an alum of DPL, I take great pride in giving back to the school that taught me.  I love helping others learn and discover.
+    .col.s12#about-me
+      %br/
+      %h3 About Me
+      %hr/
+      %p.burb  I'm Rosie and I love programming.  Being a web developer gives me a sense of purpose and pride.  I love solving problems and creating new things.  Other than programming, some of my interests include making good coffee, music, television, fitness, learning, and sewing.
 
-      %h3 Exposure Tracker
-      %h4 Web Development Intern
+    .col.s12#work
+      %br/
+      %h3  
+        = link_to 'DevPoint Labs', "http://www.devpointlabs.com/", target: '_blank'
+      %hr/
+      %h5 Instructor
+      %p August 2015 - Present
+      %p  At DevPoint Labs, I lead the afternoon project time and help students learn Ruby on Rails and related tools.  As an alum of DPL, I take great pride in giving back to the school that taught me.  I love helping others learn and discover, as well as solidifying my own skills.
+
+      %h3 
+        = link_to 'Exposure Tracker', "https://www.exposuretrackerapp.com/", target: '_blank'
+      %hr/
+      %h5 Web Development Intern
+      %p July 2015 - Present
       %p  I started my internship at Exposure Tracker while finishing at DevPoint Labs.  This was an exciting opportunity for me to gain experience with a real Rails application.  Responsibilities include resolving bugs and improving existing features.  I also dedicated time to replacing the Bootstrap CSS framework with Materialize.  
 
-      %h3 Suppose Quilt Boutique
-      %h4 Customer Service Associate
+      %h3 
+        = link_to 'Suppose Quilt Boutique', "https://www.etsy.com/shop/suppose", target: '_blank'
+      %hr/
+      %h5 Customer Service Associate
+      %p June 2010 - May 2015
       %p  Suppose Quilt Shop is a family-owned small business with a focus on custom quilting and designer fabric.  Some of my responsiblities included assisting customers with color choice and design ideas, and creating samples to display in the shop.
 
-    %div#projects.col.s12
-      %h3 SLCfit
-      %p SLCfit is a health and fitness web app built with Ruby on Rails, Coffeescript, HTML, CSS, RSpec, Postgres, and Bootstrap.  I implemented RSpec testing, GoogleCharts functionality, and the Yelp api, as well as assisted with general styling.  This project was the final capstone group project at DPL.
-      %h3 Sixerr
-
-    %div#volunteer.col.s12
-      %h3 Rails Girls
-      %h4 Coach, Speaker
-      %p  Rails Girls is a community-driven, international organization geared towards introducing women to programming.  I was given the opportunity to be a coach at Rails Girls SLC and to also give the Intro to Programming talk at the event.  Check out my presentation on Youtube!
-      
-      %iframe{:allowfullscreen => "", :frameborder => "0", :height => "315", :src => "https://www.youtube.com/embed/DV95ZS-75cU", :width => "420"}
-
-    %div#resume.col.s12
+    .col.s12#projects
+      %br/
       %h3 
+        = link_to 'SLCfit', "https://www.slcfit.com", target: '_blank'
+      %hr/
+      %p DPL Capstone
+      %p SLCfit is a health and fitness web app built with Ruby on Rails, Coffeescript, HTML, CSS, RSpec, PostgreSQL, and Bootstrap.  I implemented RSpec testing, biometrics functionality (including GoogleCharts), and the Yelp api, as well as assisted with general styling.  This project was my group capstone at DPL.  The functionality of the site includes user profiles, creating and tracking goals, personal biometrics data tracking, a social forum, and a yelp api search.
+      %h3 
+        = link_to 'Sixerr', "http://sixerr.herokuapp.com/", target: '_blank'
+      %hr/
+      %p DPL Summer 2015 Hackathon Winner
+      %p Sixerr is a peer-to-peer service site. This was a group project completed at my first DPL hackathon.  The app was completed in one day after four weeks of learning Ruby, Rails, and Bootstrap.  Functionality includes user profiles, adding and deleting services, signing up to complete services, and Stripe integration.
 
+    .col.s12#volunteer
+      %br/
+      .col.m6.s12
+        %h3 
+          =link_to 'Rails Girls', "http://railsgirls.com/", target: '_blank'
+        %hr/
+        %h4 Coach, Speaker
+        %p October 2015
+        %p  Rails Girls is a community-driven, international organization geared towards introducing women to programming.  I was given the opportunity to be a coach at Rails Girls SLC and also to give the Intro to Programming talk at the event.  Check out my presentation on Youtube!
+      
+      .col.m6.s12
+        %iframe{:allowfullscreen => "", :frameborder => "0", :height => "315", :src => "https://www.youtube.com/embed/DV95ZS-75cU", :width => "420"}
 
 
   / %div.row

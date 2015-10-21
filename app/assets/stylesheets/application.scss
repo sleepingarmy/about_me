@@ -4,11 +4,11 @@ $primary-color: color("teal", "darken-4") !default;
 @import 'materialize';
 
 /* FONTS */
-/*
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Karla', sans-serif;
 }
 
+/*
 h2 {
    font-family: 'Pacifico', cursive;
    cursor: pointer;
@@ -19,7 +19,22 @@ h3 {
 }
 
 */
-
+img.responsive-img {
+  max-width: 80% !important;
+}
 .rosie-img {
   border-radius: 580px;
+  size: 50%;
+}
+
+.padding-left {
+  padding-left: 10px !important;
+}
+
+p.blurb {
+  line-height: 200%;
+}
+
+a {
+  color: #4db6ac ;
 }
