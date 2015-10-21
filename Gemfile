@@ -39,7 +39,7 @@ gem 'haml-rails'
 
 group :production do
   gem 'rails_12factor'
-  gem 'puma'
+  gem 'thin'
 end
 
 
