@@ -8,32 +8,29 @@
   = csrf_meta_tags 
 
   / google fonts
-  %link{:href => "https://fonts.googleapis.com/css?family=Raleway|Poiret+One|Vollkorn|Karla:400,700|Josefin+Slab:400,600", :rel => "stylesheet", :type => "text/css"}/
+  %link{:href => "https://fonts.googleapis.com/css?family=Abril+Fatface|Karla:400,400italic,700,700italic", :rel => "stylesheet", :type => "text/css"}/
 
   %link{:href => "https://fonts.googleapis.com/icon?family=Material+Icons", :rel => "stylesheet"}/
 
 
-%body
-  %div.container-fluid
-    %header
-      .navbar-fixed
-        %nav
-          .nav-wrapper
-            %a.brand-logo.padding-left{:href => ""}
-              ROSIE THOMAS
-            %ul#nav-mobile.right.hide-on-med-and-down
-              %li
-                %a.material-icons.padding-top{:href => "mailto:rsm.thomas@gmail.com"} email
-                / = link_to 'rsm.thomas@gmail.com', mailto: 'rsm.thomas@gmail.com', target: '_blank'
-              %li
-                = link_to "Instagram", "https://www.instagram.com/sleepingarmy", target: '_blank'
-              %li
-                = link_to "Github", "https://github.com/sleepingarmy", target: '_blank'
-              %li
-                = link_to "Linkedin", "https://www.linkedin.com/in/rosiethom", target: '_blank'
+%body.site
 
-= yield
+  %header#header
+    %h1.name
+      ROSIE THOMAS
+    %h2.whoami
+      Salt Lake City-based full-stack web developer
+    / = link_to("enter", about_path, id: 'more')
+    %h3.whoami  the site is currently being improved.  please visit again soon!  feel free to contact me at rsm.thomas@gmail.com
+      
+  #site-content
+    #yield.hide
+      = yield
 
-
-
-
+  %footer.hide
+    .container
+      %p
+        &copy; Rosemary Thomas 2015
+      %p
+        rsm.thomas@gmail.com
+      

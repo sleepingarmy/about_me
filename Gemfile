@@ -33,8 +33,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'bootstrap-sass', '~> 3.3.5'
-gem 'materialize-sass'
+# gem 'materialize-sass'
 gem 'haml-rails'
 
 group :production do

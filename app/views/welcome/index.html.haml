@@ -1,103 +1,86 @@
+.nav-container
+  = link_to('my work', about_path)
+  = link_to("home", root_path, id: 'home')
+
 .container
-  .row
-    %br/
-    %div.col.m6.s12.center-align
-      = image_tag("ham.jpg", class: 'responsive-img rosie-img')
-    %div.col.m6.s12.center-align
-      %h1
-        Welcome!
-      %p.blurb  Thank you for visiting my personal website.  Please check out my information below.  I look forward to hearing from you!  Please contact me at rsm.thomas@gmail.com.
+  .sidebar
+    %h1.title.left about me
+  .main
+    %i image
+  .main
+    %p.paragraph.right
+      I'm Rosie and I love programming.  Being a web developer gives me a sense of purpose and pride.  I love solving problems and creating new things.  Other than programming, some of my interests include coffee, music, television, and sewing.
+%hr/
 
-  .row
-    %br/
-    .col.s12.center-align
-      %ul.tabs
-        %li.tab.col.s3
-          %a{:href => "#about-me"}
-            %i.material-icons.tiny face
-            About Me
-        %li.tab.col.s3
-          %a{:href => "#work"}
-            %i.material-icons.tiny laptop
-            work
-        %li.tab.col.s3
-          %a{:href => "#projects"}
-            %i.material-icons.tiny palette
-            projects
-        %li.tab.col.s3
-          %a.active{:href => "#volunteer"}
-            %i.material-icons.tiny star
-            volunteer
+.container
+  .main
+    %p.paragraph.left
+      I worked at my family's fabric store while attending college and developed a love for sewing and beautiful design.  I now work at Exposure Tracker as a wev dev intern and at Devpoint Labs as a TA.
+    %h3
+      = link_to 'DevPoint Labs', "http://www.devpointlabs.com/", target: '_blank'
+    %h3
+      = link_to 'Exposure Tracker', "https://www.exposuretrackerapp.com/", target: '_blank'
+  .sidebar
+    %h1.title.right work
+%hr/
 
-    .col.s12#about-me
-      %br/
-      %h3 About Me
-      %hr/
-      %p.burb  I'm Rosie and I love programming.  Being a web developer gives me a sense of purpose and pride.  I love solving problems and creating new things.  Other than programming, some of my interests include making good coffee, music, television, fitness, learning, and sewing.
+.container
+  .sidebar
+    %h1.title.left education
+  .main
+    %p.paragraph.right
+      I attended Utah State University where I studied math.  Upon graduating, I decided to take my interest in programming seriously, so I attended Devpoint Labs in the summer of 2015.  I've been programming and learning ever since.
+%hr/
 
-    .col.s12#work
-      %br/
-      %h3  
-        = link_to 'DevPoint Labs', "http://www.devpointlabs.com/", target: '_blank'
-      %hr/
-      %h5 Instructor
-      %p August 2015 - Present
-      %p  At DevPoint Labs, I lead the afternoon project time and help students learn Ruby on Rails and related tools.  As an alum of DPL, I take great pride in giving back to the school that taught me.  I love helping others learn and discover, as well as solidifying my own skills.
-
-      %h3 
-        = link_to 'Exposure Tracker', "https://www.exposuretrackerapp.com/", target: '_blank'
-      %hr/
-      %h5 Web Development Intern
-      %p July 2015 - Present
-      %p  I started my internship at Exposure Tracker while finishing at DevPoint Labs.  This was an exciting opportunity for me to gain experience with a real Rails application.  Responsibilities include resolving bugs and improving existing features.  I also dedicated time to replacing the Bootstrap CSS framework with Materialize.  
-
-      %h3 
-        = link_to 'Suppose Quilt Boutique', "https://www.etsy.com/shop/suppose", target: '_blank'
-      %hr/
-      %h5 Customer Service Associate
-      %p June 2010 - May 2015
-      %p  Suppose Quilt Shop is a family-owned small business with a focus on custom quilting and designer fabric.  Some of my responsiblities included assisting customers with color choice and design ideas, and creating samples to display in the shop.
-
-    .col.s12#projects
-      %br/
-      %h3 
-        = link_to 'SLCfit', "https://www.slcfit.com", target: '_blank'
-      %hr/
-      %p DPL Capstone
-      %p SLCfit is a health and fitness web app built with Ruby on Rails, Coffeescript, HTML, CSS, RSpec, PostgreSQL, and Bootstrap.  I implemented RSpec testing, biometrics functionality (including GoogleCharts), and the Yelp api, as well as assisted with general styling.  This project was my group capstone at DPL.  The functionality of the site includes user profiles, creating and tracking goals, personal biometrics data tracking, a social forum, and a yelp api search.
-      %h3 
-        = link_to 'Sixerr', "http://sixerr.herokuapp.com/", target: '_blank'
-      %hr/
-      %p DPL Summer 2015 Hackathon Winner
-      %p Sixerr is a peer-to-peer service site. This was a group project completed at my first DPL hackathon.  The app was completed in one day after four weeks of learning Ruby, Rails, and Bootstrap.  Functionality includes user profiles, adding and deleting services, signing up to complete services, and Stripe integration.
-
-    .col.s12#volunteer
-      %br/
-      .col.m6.s12
-        %h3 
-          =link_to 'Rails Girls', "http://railsgirls.com/", target: '_blank'
-        %hr/
-        %h4 Coach, Speaker
-        %p October 2015
-        %p  Rails Girls is a community-driven, international organization geared towards introducing women to programming.  I was given the opportunity to be a coach at Rails Girls SLC and also to give the Intro to Programming talk at the event.  Check out my presentation on Youtube!
-      
-      .col.m6.s12
-        %iframe{:allowfullscreen => "", :frameborder => "0", :height => "315", :src => "https://www.youtube.com/embed/DV95ZS-75cU", :width => "420"}
+.container
+  .main
+    %p.paragraph.left
+      At DevPoint Labs, I learned Ruby, Rails, SQL, Javascript, Jquery, AJAX, HTML & CSS, multiple CSS frameworks, Git, and other related tools.  Outside of class, I'm currently obsessed with utilizing flexbox CSS in my personal projects and learning React.
+  .sidebar
+    %h1.title.right skills
+%hr/
 
 
-  / %div.row
-  /   %div.col.s4
-  /     %h2#work-experience
-  /       work experience
-  /     %p technology, television, design, sewing, fitness
 
-  /   %div.col.s4
-  /     %h2#projects
-  /       projects
-  /     %p slcfit
-  /     %p sixerr
+.container
+  .sidebar
+    %h1.title.left what i do
+  .main
+    %p.paragraph.right  
+      I'm a full-stack web developer currently working at Exposure Tracker and Devpoint Labs.  I love programming, learning every day, and teaching others to do the same.
 
-  /   %div.col.s4
-  /     %h2#volunteer
-  /       volunteer experience
-  /     %p rails girls
+%hr/
+
+.container
+  .main
+    %p.paragraph.left
+      Being a TA at Devpoint Labs, I'm always brushing up on my basice Ruby, Rails, and Javascript skills.  Outside of class, I'm currently obsessed with utilizing flexbox CSS in my personal projects and learning React.
+  .sidebar
+    %h1.title.right what i'm learning
+%hr/
+
+.container
+  .sidebar
+    %h1.title.left what i've done
+  .main
+    %p.paragraph.right
+      My first project was for my first hackathon as a student at Devpoint Labs.  This project was built with only a knowledge of basic ruby, rails, and git flow.  My biggest project while at Devpoint Labs was my group capstone, SLCfit.  Check out the site at slcfit.com and on github.  I am currently working on a personal project -- a web store for my family's brick and mortar fabric store.  Keep up with my progress on github.
+%hr/
+
+.container
+  .main
+    %ul
+      %li.left
+        = link_to "Instagram", "https://www.instagram.com/sleepingarmy", target: '_blank'
+      %li.left
+        = link_to "Linkedin", "https://www.linkedin.com/in/rosiethom", target: '_blank'
+      %li.left
+        = link_to "Github", "https://github.com/sleepingarmy", target: '_blank'
+      %li.left
+        %a{:href => "mailto:rsm.thomas@gmail.com"} Email
+
+  .sidebar
+    %h1.title.right
+      find me online
+%hr/
+
